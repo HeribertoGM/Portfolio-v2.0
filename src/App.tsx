@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path="/*">
+					<Route path="" element={<h1>hola</h1>} />
+					<Route path="about" element={<h1>acerca</h1>} />
+					<Route path="resume" element={<h1>cv</h1>} />
+					<Route path="*" element={<h1>404</h1>} />
+				</Route>
+				<Route path="/en/*">
+					<Route path="" element={<h1>hello</h1>} />
+					<Route path="about" element={<h1>about</h1>} />
+					<Route path="resume" element={<h1>resume</h1>} />
+					<Route path="*" element={<h1>404</h1>} />
+				</Route>
+				<Route path="*" element={<h1>404</h1>} />
+			</Routes>
+		</Router>
+	);
 }
 
 export default App;
