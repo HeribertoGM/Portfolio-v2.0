@@ -8,8 +8,8 @@ interface transcript_object {
 }
 
 interface transcript {
-	header: string;
 	Header: transcript_object;
+	Education: transcript_object;
 }
 
 interface style {

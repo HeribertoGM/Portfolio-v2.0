@@ -25,6 +25,7 @@ function Header({ language }: props): JSX.Element {
 						items={data.Carousel}
 						typingInterval={500}
 						deletingInterval={250}
+						cursor={false}
 					/>
 				</Typography>
 			</Container>
