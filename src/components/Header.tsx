@@ -1,4 +1,5 @@
-import { props, transcript_object } from "../types";
+import { props } from "../types";
+import { header_transcript_object } from "../transcripts_types";
 import { getTranscript } from "../transcripts";
 import { Container, Typography } from "@mui/material";
 
@@ -7,7 +8,7 @@ import HeaderStyles from "../styles/Header";
 const ReactRotatingText = require("react-rotating-text");
 
 function Header({ language }: props): JSX.Element {
-	const data: transcript_object = getTranscript[language].Header;
+	const data: header_transcript_object = getTranscript[language].Header;
 
 	return (
 		<Container

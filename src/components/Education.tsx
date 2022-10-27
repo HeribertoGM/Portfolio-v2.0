@@ -1,4 +1,5 @@
-import { props, transcript_object } from "../types";
+import { props } from "../types";
+import { education_transcript_object } from "../transcripts_types";
 import { getTranscript } from "../transcripts";
 import { Container, Typography } from "@mui/material";
 
@@ -7,7 +8,7 @@ import tec_logo from "../images/tec_logo.png";
 import EducationStyles from "../styles/Education";
 
 function Education({ language }: props): JSX.Element {
-	const data: transcript_object = getTranscript[language].Education;
+	const data: education_transcript_object = getTranscript[language].Education;
 
 	return (
 		<Container
