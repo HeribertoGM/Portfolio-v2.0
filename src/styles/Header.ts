@@ -1,4 +1,5 @@
 import { style } from "../types";
+import colors from "./Colors";
 
 const HeaderStyles: style = {
 	SectionContainer: {
@@ -6,17 +7,17 @@ const HeaderStyles: style = {
 		height: "100vh",
 		display: "flex",
 		alignItems: "center",
-		backgroundColor: "rgb(38, 81, 117)",
+		backgroundColor: colors.dark_blue,
 	},
 	TextContainer: { width: "fit-content" },
 	Title: {
 		width: "fit-content",
-		color: "#212529",
+		color: colors.dark_gray,
 		fontWeight: "bold",
 	},
 	Subtitle: {
 		width: "fit-content",
-		color: "#6C757D",
+		color: colors.muted,
 		fontWeight: "medium",
 	},
 };

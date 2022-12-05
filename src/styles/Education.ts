@@ -1,18 +1,19 @@
 import { style } from "../types";
+import colors from "./Colors";
 
 const EducationStyles: style = {
 	SectionContainer: {
 		border: "solid 5px green",
 		minHeight: "80vh",
-		backgroundColor: "rgb(58,61,63)",
+		backgroundColor: colors.light_gray,
 	},
 	Title: {
 		textAlign: "center",
 		paddingTop: "15px",
-		color: "steelblue",
+		color: colors.light_blue,
 	},
 	Divider: {
-		border: "solid 1px #444",
+		border: "solid 1px #555",
 		width: "85%",
 	},
 	InnerContainer: {
@@ -25,8 +26,8 @@ const EducationStyles: style = {
 		marginBottom: "50px",
 	},
 	TecLogo: {
-		border: "solid 3px white",
-		backgroundColor: "white",
+		border: "solid 3px " + colors.white,
+		backgroundColor: colors.white,
 		borderRadius: "50%",
 		height: "300px",
 	},
@@ -36,8 +37,8 @@ const EducationStyles: style = {
 		flexDirection: "column",
 		justifyContent: "center",
 	},
-	Subtitle: { color: "steelblue", fontWeight: "light" },
-	Text: { color: "gray", fontWeight: "light" },
+	Subtitle: { color: colors.light_blue, fontWeight: "light" },
+	Text: { color: colors.gray, fontWeight: "light" },
 };
 
 export default EducationStyles;
