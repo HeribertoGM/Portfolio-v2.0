@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Typography, Fade } from "@mui/material";
 import {
 	Timeline,
@@ -15,35 +15,12 @@ import { experience_transcript_object } from "../transcripts_types";
 import { getTranscript } from "../transcripts";
 import ExperienceStyles from "../styles/Experience";
 
-function ExperienceItem({ elem, last }: experience_item_props): JSX.Element {
-	const [visible, setVisible] = useState(false);
-	const ref = useRef<any>();
-
-	const handler = () => {
-		if (ref.current) {
-			let up = ref.current.offsetTop;
-			let height = ref.current.offsetHeight;
-
-			if (
-				up <= window.scrollY + window.innerHeight * 0.75 &&
-				up + height * 0.3 >= window.scrollY
-			) {
-				setVisible(true);
-			} else {
-				setVisible(false);
-			}
-		}
-	};
-
-	useEffect(() => {
-		window.addEventListener("scroll", handler);
-
-		return () => window.removeEventListener("scroll", handler);
-	}, []);
+function ExperienceItem(props: experience_item_props): JSX.Element {
+	let { id, elem, visible, last } = props;
 
 	return (
 		<Fade in={visible}>
-			<TimelineItem ref={ref}>
+			<TimelineItem id={id}>
 				<TimelineOppositeContent
 					sx={ExperienceStyles.TimelineOppositeContent}
 				>
@@ -81,6 +58,35 @@ function ExperienceItem({ elem, last }: experience_item_props): JSX.Element {
 function Experience({ language }: props): JSX.Element {
 	const data: experience_transcript_object =
 		getTranscript[language].Experience;
+	const [visibility, setVisibility] = useState(data.Items.map(() => false));
+
+	const handler = () => {
+		let currState = visibility.slice();
+		for (let i = 0; i < data.Items.length; i++) {
+			let item = document.getElementById(`elem#${i}`);
+
+			if (item) {
+				let up = item.offsetTop;
+				let height = item.offsetHeight;
+
+				if (
+					up <= window.scrollY + window.innerHeight * 0.75 &&
+					up + height * 0.3 >= window.scrollY
+				) {
+					currState[i] = true;
+				} else {
+					currState[i] = false;
+				}
+			}
+		}
+		setVisibility(currState);
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handler);
+
+		return () => window.removeEventListener("scroll", handler);
+	}, []);
 
 	return (
 		<Container
@@ -100,8 +106,10 @@ function Experience({ language }: props): JSX.Element {
 				<Timeline sx={ExperienceStyles.Timeline}>
 					{data.Items.map((elem, id) => (
 						<ExperienceItem
+							id={`elem#${id}`}
 							key={id}
 							elem={elem}
+							visible={visibility[id]}
 							last={data.Items.length - 1 !== id}
 						/>
 					))}

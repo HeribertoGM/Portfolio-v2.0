@@ -24,8 +24,8 @@ const ExperienceStyles: style = {
 		alignItems: "center",
 		width: "90%",
 		maxWidth: "1100px",
-		marginTop: "50px",
-		marginBottom: "50px",
+		marginTop: 2,
+		marginBottom: 2,
 	},
 	Timeline: {
 		[`& .${timelineOppositeContentClasses.root}`]: {

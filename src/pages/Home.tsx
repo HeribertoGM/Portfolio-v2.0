@@ -15,8 +15,6 @@ function Home({ language }: props): JSX.Element {
 			<Header language={language} />
 			<Education language={language} />
 			<Experience language={language} />
-			<Education language={language} />
-			<Education language={language} />
 		</Container>
 	);
 }

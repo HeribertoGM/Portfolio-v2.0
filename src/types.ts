@@ -11,8 +11,10 @@ interface props {
 }
 
 interface experience_item_props {
+	id: string;
 	elem: experience_item_object;
-	last: Boolean;
+	last: boolean;
+	visible: boolean;
 }
 
 interface transcript {
