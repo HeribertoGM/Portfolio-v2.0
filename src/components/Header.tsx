@@ -1,8 +1,8 @@
+import { Container, Typography } from "@mui/material";
+
 import { props } from "../types";
 import { header_transcript_object } from "../transcripts_types";
 import { getTranscript } from "../transcripts";
-import { Container, Typography } from "@mui/material";
-
 import HeaderStyles from "../styles/Header";
 
 const ReactRotatingText = require("react-rotating-text");

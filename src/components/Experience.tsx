@@ -1,7 +1,5 @@
-import { props, experience_item_props } from "../types";
-import { experience_transcript_object } from "../transcripts_types";
-import { getTranscript } from "../transcripts";
-import { Container, Typography } from "@mui/material";
+import { useRef, useEffect, useState } from "react";
+import { Container, Typography, Fade } from "@mui/material";
 import {
 	Timeline,
 	TimelineItem,
@@ -12,41 +10,71 @@ import {
 	TimelineOppositeContent,
 } from "@mui/lab";
 
+import { props, experience_item_props } from "../types";
+import { experience_transcript_object } from "../transcripts_types";
+import { getTranscript } from "../transcripts";
 import ExperienceStyles from "../styles/Experience";
 
 function ExperienceItem({ elem, last }: experience_item_props): JSX.Element {
+	const [visible, setVisible] = useState(false);
+	const ref = useRef<any>();
+
+	const handler = () => {
+		if (ref.current) {
+			let up = ref.current.offsetTop;
+			let height = ref.current.offsetHeight;
+
+			if (
+				up <= window.scrollY + window.innerHeight * 0.75 &&
+				up + height * 0.3 >= window.scrollY
+			) {
+				setVisible(true);
+			} else {
+				setVisible(false);
+			}
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handler);
+
+		return () => window.removeEventListener("scroll", handler);
+	}, []);
+
 	return (
-		<TimelineItem>
-			<TimelineOppositeContent
-				sx={ExperienceStyles.TimelineOppositeContent}
-			>
-				<Typography sx={ExperienceStyles.ItemTime}>
-					{elem.Time}
-				</Typography>
-			</TimelineOppositeContent>
-			<TimelineSeparator sx={ExperienceStyles.TimelineSeparator}>
-				<TimelineDot variant="outlined" color="primary" />
-				{last && <TimelineConnector />}
-			</TimelineSeparator>
-			<TimelineContent sx={ExperienceStyles.TimelineContent}>
-				<Typography sx={ExperienceStyles.ItemTitle}>
-					{elem.Title}
-				</Typography>
-				<ul>
-					{elem.Description.map((text, idx) => {
-						return (
-							<Typography
-								key={idx}
-								component="li"
-								sx={ExperienceStyles.ItemDescription}
-							>
-								{text}
-							</Typography>
-						);
-					})}
-				</ul>
-			</TimelineContent>
-		</TimelineItem>
+		<Fade in={visible}>
+			<TimelineItem ref={ref}>
+				<TimelineOppositeContent
+					sx={ExperienceStyles.TimelineOppositeContent}
+				>
+					<Typography sx={ExperienceStyles.ItemTime}>
+						{elem.Time}
+					</Typography>
+				</TimelineOppositeContent>
+				<TimelineSeparator sx={ExperienceStyles.TimelineSeparator}>
+					<TimelineDot variant="outlined" color="primary" />
+					{last && <TimelineConnector />}
+				</TimelineSeparator>
+				<TimelineContent sx={ExperienceStyles.TimelineContent}>
+					<Typography sx={ExperienceStyles.ItemTitle}>
+						{elem.Title}
+					</Typography>
+					<ul>
+						{elem.Description.map((text, idx) => {
+							return (
+								<Typography
+									key={idx}
+									component="li"
+									sx={ExperienceStyles.ItemDescription}
+								>
+									{text}
+								</Typography>
+							);
+						})}
+					</ul>
+				</TimelineContent>
+			</TimelineItem>
+		</Fade>
 	);
 }
 

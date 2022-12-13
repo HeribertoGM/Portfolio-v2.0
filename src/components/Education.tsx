@@ -1,10 +1,9 @@
+import { Container, Typography } from "@mui/material";
+
 import { props } from "../types";
 import { education_transcript_object } from "../transcripts_types";
 import { getTranscript } from "../transcripts";
-import { Container, Typography } from "@mui/material";
-
 import tec_logo from "../images/tec_logo.png";
-
 import EducationStyles from "../styles/Education";
 
 function Education({ language }: props): JSX.Element {
