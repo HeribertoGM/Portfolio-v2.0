@@ -4,6 +4,7 @@ import { props } from "../types";
 import Header from "../components/Header";
 import Education from "../components/Education";
 import Experience from "../components/Experience";
+import Projects from "../components/Projects";
 
 function Home({ language }: props): JSX.Element {
 	return (
@@ -15,6 +16,7 @@ function Home({ language }: props): JSX.Element {
 			<Header language={language} />
 			<Education language={language} />
 			<Experience language={language} />
+			<Projects language={language} />
 		</Container>
 	);
 }

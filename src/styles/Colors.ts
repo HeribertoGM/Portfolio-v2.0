@@ -7,6 +7,10 @@ const colors = {
 	gray: "gray",
 	muted_gray: "#999",
 	light_gray: "rgb(58,61,63)",
+	silver: "silver",
+	slategray: "slategray",
+	gainsboro: "gainsboro",
+	aliceblue: "aliceblue",
 };
 
 export default colors;

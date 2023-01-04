@@ -3,15 +3,16 @@ const en = {
 		Title: "Hi, I'm Heriberto",
 		Subtitle: "and i love coding in ",
 		Carousel: [
+			"TypeScript.",
+			"JavaScript.",
 			"Python.",
 			"Java.",
 			"C++.",
 			"C.",
 			"C#.",
+			"Ruby.",
 			"HTML.",
 			"CSS.",
-			"JavaScript.",
-			"Ruby.",
 		],
 	},
 	Education: {
@@ -49,6 +50,99 @@ const en = {
 				Description: [
 					"Design, Develop and Maintain web apps (React) for internal management software systems.",
 					"Develop automation (Python/C++) and analysis tools (React) for accounting management.",
+				],
+			},
+		],
+	},
+	Projects: {
+		Title: "Featured Projects",
+		Items: [
+			{
+				Title: "Portfolio Web Page",
+				Time: "2022",
+				Img: "Portfolio.jpg",
+				Description:
+					"Personal portfolio website to concentrate information from previous work and educational experiences, as well as projects of interest. Developed with Typescript and React, deployed on AWS.",
+				Tags: ["Typescript", "React", "MaterialUI", "AWS"],
+				RepoLinks: [
+					{
+						Label: "Github",
+						Type: "Github",
+						Link: "https://github.com/HeribertoGM/Portfolio-v2.0",
+					},
+				],
+			},
+			{
+				Title: "Palaunu++",
+				Time: "2021",
+				Img: "Palaunu.png",
+				Description:
+					"Custom compiler for the execution of a tailor-made programming language based on C++ syntax and the structure of the JVM for Java. Developed in Python with the Lex-Yacc library.",
+				Tags: ["Python", "Lex-Yacc", "Compiler"],
+				RepoLinks: [
+					{
+						Label: "Github",
+						Type: "Github",
+						Link: "https://github.com/HeribertoGM/Proyecto_Compiladores",
+					},
+				],
+			},
+			{
+				Title: "ZONAMACO app",
+				Time: "2021",
+				Img: "zonamaco.jpg",
+				Description:
+					"iOS and Web app designed for ZONAMACO art fair, it allows users to get information from exhibitors, art pieces on display and event schedule within the fair. Developed with Swift (iOS app), Javascript and React (data management website) and Firebase (back-end).",
+				Tags: [
+					"Swift",
+					"UIKit",
+					"Javascript",
+					"React",
+					"Firebase",
+					"iOS",
+					"Web",
+				],
+				RepoLinks: [
+					{
+						Label: "AppStore (iOS)",
+						Type: "Link",
+						Link: "https://apps.apple.com/ai/app/z-onamaco/id1601743483",
+					},
+				],
+			},
+			{
+				Title: "Equilibrio Rotacional",
+				Time: "2021",
+				Img: "equilibrio.jpg",
+				Description:
+					"Learning app designed for students to ease the learning of torque and rotational equilibrium concepts, includes an environment that simulates mass and gravity. Developed for iOS with Swift and SpriteKit.",
+				Tags: ["Swift", "UIKit", "SpriteKit", "iOS"],
+				RepoLinks: [
+					{
+						Label: "Github",
+						Type: "Github",
+						Link: "https://github.com/RicarlOz/Fisica-Equilibrio",
+					},
+					{
+						Label: "AppStore (iOS)",
+						Type: "Link",
+						Link: "https://apps.apple.com/us/app/itc-mty-equilibrio-rotacional/id1574209508",
+					},
+				],
+			},
+			{
+				Title: "Breaker",
+				Time: "2020",
+				Img: "breaker.jpg",
+				Description:
+					"New version of the classic game Block Breaker, support different maps, save/load game and custom boosts for player. Developed from scratch with Java programming language.",
+				Tags: ["Java", "", "Video Game"],
+				RepoLinks: [
+					{
+						Label: "Github",
+						Type: "Github",
+						Link: "https://github.com/RicarlOz/Breaker",
+					},
 				],
 			},
 		],
