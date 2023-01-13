@@ -12,6 +12,7 @@ function Header({ language }: props): JSX.Element {
 
 	return (
 		<Container
+			id={"header"}
 			sx={HeaderStyles.SectionContainer}
 			maxWidth={false}
 			disableGutters={true}

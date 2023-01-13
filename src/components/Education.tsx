@@ -11,6 +11,7 @@ function Education({ language }: props): JSX.Element {
 
 	return (
 		<Container
+			id={"education"}
 			sx={EducationStyles.SectionContainer}
 			maxWidth={false}
 			disableGutters={true}

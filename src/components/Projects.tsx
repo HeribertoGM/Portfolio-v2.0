@@ -146,6 +146,7 @@ function Projects({ language }: props): JSX.Element {
 
 	return (
 		<Container
+			id={"projects"}
 			sx={ProjectsStyles.SectionContainer}
 			maxWidth={false}
 			disableGutters={true}
