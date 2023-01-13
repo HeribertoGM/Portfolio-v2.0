@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-v2.0/static/css/main.8a685450.css",
-    "main.js": "/Portfolio-v2.0/static/js/main.59717c34.js",
+    "main.css": "/Portfolio-v2.0/static/css/main.b9aa478e.css",
+    "main.js": "/Portfolio-v2.0/static/js/main.6cb2568c.js",
     "static/media/tec_logo.png": "/Portfolio-v2.0/static/media/tec_logo.3ea94ce7f25b9af87c45.png",
     "static/media/equilibrio.jpg": "/Portfolio-v2.0/static/media/equilibrio.41551d1d07cc9d67b360.jpg",
     "static/media/breaker.jpg": "/Portfolio-v2.0/static/media/breaker.16cd2ce7167bf067514a.jpg",
@@ -10,11 +10,11 @@
     "static/media/zonamaco.jpg": "/Portfolio-v2.0/static/media/zonamaco.aa5a71b12c1ceae6abde.jpg",
     "static/media/Portfolio.jpg": "/Portfolio-v2.0/static/media/Portfolio.2a19bc2552edffe69533.jpg",
     "index.html": "/Portfolio-v2.0/index.html",
-    "main.8a685450.css.map": "/Portfolio-v2.0/static/css/main.8a685450.css.map",
-    "main.59717c34.js.map": "/Portfolio-v2.0/static/js/main.59717c34.js.map"
+    "main.b9aa478e.css.map": "/Portfolio-v2.0/static/css/main.b9aa478e.css.map",
+    "main.6cb2568c.js.map": "/Portfolio-v2.0/static/js/main.6cb2568c.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a685450.css",
-    "static/js/main.59717c34.js"
+    "static/css/main.b9aa478e.css",
+    "static/js/main.6cb2568c.js"
   ]
 }
