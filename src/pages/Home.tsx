@@ -1,10 +1,11 @@
-import Container from "@mui/material/Container";
+import { Container } from "@mui/material";
 
 import { props } from "../types";
 import Header from "../components/Header";
 import Education from "../components/Education";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
+import ScrollUp from "../components/ScrollUp";
 
 function Home({ language }: props): JSX.Element {
 	return (
@@ -17,6 +18,7 @@ function Home({ language }: props): JSX.Element {
 			<Education language={language} />
 			<Experience language={language} />
 			<Projects language={language} />
+			<ScrollUp />
 		</Container>
 	);
 }
