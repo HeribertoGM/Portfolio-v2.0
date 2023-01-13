@@ -30,7 +30,10 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"precustom-deploy": "git add . ; git commit -m \"$npm_config_gh_msg\" ; git push",
+		"custom-deploy": "git checkout uat ; git merge --no-ff --no-commit master ;  git commit -m \"$npm_config_gh_msg\" ; git push",
+		"postcustom-deploy": "npm run deploy -- -m \"$npm_config_gh_msg\""
 	},
 	"eslintConfig": {
 		"extends": [
