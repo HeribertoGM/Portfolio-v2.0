@@ -10,7 +10,10 @@ function ScrollUp(): JSX.Element {
 				bottom: "25px",
 				left: "25px",
 			}}
-			onClick={() => window.location.replace("/#header")}
+			onClick={() =>
+				(window.location.href =
+					window.location.href.replace("#header", "") + "#header")
+			}
 		>
 			<NorthIcon sx={{ fontSize: 30 }} />
 		</IconButton>
