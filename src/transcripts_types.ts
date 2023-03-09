@@ -43,6 +43,27 @@ interface projects_transcript_object {
 	Items: projects_item_object[];
 }
 
+interface skills_item_object {
+	name: string;
+	years: number;
+	skill: number;
+	type: string;
+}
+
+interface skills_type_section_titles_object {
+	language: string;
+	framework: string;
+	cloud: string;
+	[other: string]: string;
+}
+
+interface skills_transcript_object {
+	Title: string;
+	Skills: skills_item_object[];
+	TagYears: string;
+	TypeSectionsTitles: skills_type_section_titles_object;
+}
+
 export type {
 	header_transcript_object,
 	education_transcript_object,
@@ -51,4 +72,6 @@ export type {
 	projects_transcript_object,
 	projects_item_object,
 	projects_item_icon_object,
+	skills_item_object,
+	skills_transcript_object,
 };
