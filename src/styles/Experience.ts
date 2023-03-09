@@ -5,7 +5,6 @@ import colors from "./Colors";
 
 const ExperienceStyles: style = {
 	SectionContainer: {
-		border: "solid 5px pink",
 		minHeight: "80vh",
 		backgroundColor: colors.dark_blue,
 	},
@@ -25,7 +24,6 @@ const ExperienceStyles: style = {
 		width: "90%",
 		maxWidth: "1100px",
 		marginTop: 2,
-		marginBottom: 2,
 	},
 	Timeline: {
 		[`& .${timelineOppositeContentClasses.root}`]: {

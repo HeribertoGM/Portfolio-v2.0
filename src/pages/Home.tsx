@@ -11,11 +11,7 @@ import ScrollUp from "../components/ScrollUp";
 
 function Home({ language }: props): JSX.Element {
 	return (
-		<Container
-			sx={{ border: "solid 5px red" }}
-			maxWidth={false}
-			disableGutters={true}
-		>
+		<Container maxWidth={false} disableGutters={true}>
 			<Header language={language} />
 			<Education language={language} />
 			<Experience language={language} />

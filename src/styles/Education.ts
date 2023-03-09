@@ -3,7 +3,6 @@ import colors from "./Colors";
 
 const EducationStyles: style = {
 	SectionContainer: {
-		border: "solid 5px green",
 		minHeight: "80vh",
 		backgroundColor: colors.light_gray,
 	},
