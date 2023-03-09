@@ -64,6 +64,10 @@ interface skills_transcript_object {
 	TypeSectionsTitles: skills_type_section_titles_object;
 }
 
+interface footer_transcript_object {
+	Text: string;
+}
+
 export type {
 	header_transcript_object,
 	education_transcript_object,
@@ -74,4 +78,5 @@ export type {
 	projects_item_icon_object,
 	skills_item_object,
 	skills_transcript_object,
+	footer_transcript_object,
 };

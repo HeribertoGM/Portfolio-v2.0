@@ -6,6 +6,7 @@ import Education from "../components/Education";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
 import ScrollUp from "../components/ScrollUp";
 
 function Home({ language }: props): JSX.Element {
@@ -20,6 +21,7 @@ function Home({ language }: props): JSX.Element {
 			<Experience language={language} />
 			<Projects language={language} />
 			<Skills language={language} />
+			<Footer language={language} />
 			<ScrollUp />
 		</Container>
 	);

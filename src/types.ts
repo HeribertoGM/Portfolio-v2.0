@@ -7,6 +7,7 @@ import {
 	projects_item_object,
 	skills_item_object,
 	skills_transcript_object,
+	footer_transcript_object,
 } from "./transcripts_types";
 
 interface props {
@@ -39,6 +40,7 @@ interface transcript {
 	Experience: experience_transcript_object;
 	Projects: projects_transcript_object;
 	Skills: skills_transcript_object;
+	Footer: footer_transcript_object;
 }
 
 interface style {

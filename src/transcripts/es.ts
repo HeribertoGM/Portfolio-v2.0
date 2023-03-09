@@ -189,6 +189,9 @@ const es: transcript = {
 			other: "Otros",
 		},
 	},
+	Footer: {
+		Text: "Hecho por: HeribertoGM - 2023",
+	},
 };
 
 export default es;
