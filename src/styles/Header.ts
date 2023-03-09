@@ -3,7 +3,6 @@ import colors from "./Colors";
 
 const HeaderStyles: style = {
 	SectionContainer: {
-		border: "solid 5px blue",
 		height: "100vh",
 		display: "flex",
 		alignItems: "center",

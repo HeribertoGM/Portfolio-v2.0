@@ -3,7 +3,6 @@ import colors from "./Colors";
 
 const FooterStyles: style = {
 	SectionContainer: {
-		border: "solid 5px yellow",
 		height: "7vh",
 		display: "flex",
 		alignItems: "center",

@@ -3,7 +3,6 @@ import colors from "./Colors";
 
 const ProjectsStyles: style = {
 	SectionContainer: {
-		border: "solid 5px green",
 		minHeight: "80vh",
 		backgroundColor: colors.light_gray,
 	},
@@ -23,7 +22,6 @@ const ProjectsStyles: style = {
 		width: "90%",
 		maxWidth: "1250px",
 		marginTop: "50px",
-		marginBottom: "50px",
 	},
 	ItemContainer: {
 		width: "90%",

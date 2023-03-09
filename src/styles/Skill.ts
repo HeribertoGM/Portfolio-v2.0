@@ -3,12 +3,11 @@ import colors from "./Colors";
 
 const SkillStyles: style = {
 	SectionContainer: {
-		border: "solid 5px violet",
 		minHeight: "80vh",
 		backgroundColor: colors.dark_blue,
 		display: "flex",
 		flexDirection: "column",
-		justifyContent: "center", //"flex-start",
+		justifyContent: "center",
 		alignItems: "center",
 		padding: "15px 0px",
 	},

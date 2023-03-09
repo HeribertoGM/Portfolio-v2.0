@@ -110,11 +110,6 @@ const es: transcript = {
 						Type: "Link",
 						Link: "https://apps.apple.com/ai/app/z-onamaco/id1601743483",
 					},
-					// {
-					// 	Label: "Github (Web)",
-					//	Type: "Github",
-					// 	Link: "https://github.com/ZONAMACO/zona_maco_web",
-					// },
 				],
 			},
 			{
