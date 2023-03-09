@@ -182,6 +182,9 @@ const en = {
 			other: "Others",
 		},
 	},
+	Footer: {
+		Text: "Made by: HeribertoGM - 2023",
+	},
 };
 
 export default en;
