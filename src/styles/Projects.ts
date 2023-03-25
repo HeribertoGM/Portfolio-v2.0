@@ -25,8 +25,9 @@ const ProjectsStyles: style = {
 	},
 	ItemContainer: {
 		width: "90%",
-		height: "75vh",
-		minHeight: "400px",
+		height: "550px",
+		minHeight: "450px",
+		maxHeight: "600px",
 		position: "relative",
 	},
 	ItemImg: {

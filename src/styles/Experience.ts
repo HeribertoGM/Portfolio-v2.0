@@ -5,7 +5,6 @@ import colors from "./Colors";
 
 const ExperienceStyles: style = {
 	SectionContainer: {
-		minHeight: "80vh",
 		backgroundColor: colors.dark_blue,
 	},
 	Title: {
