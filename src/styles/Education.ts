@@ -3,7 +3,9 @@ import colors from "./Colors";
 
 const EducationStyles: style = {
 	SectionContainer: {
-		minHeight: "80vh",
+		height: "550px",
+		minHeight: "550px",
+		maxHeight: "600px",
 		backgroundColor: colors.light_gray,
 	},
 	Title: {
