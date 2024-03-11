@@ -170,7 +170,20 @@ function sketch(p5: P5CanvasInstance<MySketchProps>) {
 	};
 
 	p5.windowResized = () => {
+		p5width = p5.windowWidth * 0.9;
+		p5height = p5.windowHeight * 0.85;
+		p5width = p5width > 1200 ? 1200 : p5width;
+		p5height = p5height > 900 ? 900 : p5height;
+
 		p5.resizeCanvas(p5width, p5height);
+
+		let rect = new c2.Rect(0, 0, p5width, p5height);
+		world.bounds = rect;
+
+		world.removeConstraint(world.constraints[0]);
+		legend.box = new c2.Rect(p5.width - 220, 20, 200, 220);
+		let rectConstraint = new c2.PolygonConstraint(legend.box);
+		world.addConstraint(rectConstraint);
 	};
 
 	p5.updateWithProps = (props: any) => {
@@ -192,7 +205,9 @@ function sketch(p5: P5CanvasInstance<MySketchProps>) {
 				let x = p5.random(p5width);
 				let y = p5.random(p5height);
 				let p = new c2.Particle(x, y);
-				p.radius = 20 + skills[i].skill * 10;
+				p.radius =
+					(p5.windowWidth < 550 && skills[i].skill > 2 ? 0 : 20) +
+					skills[i].skill * 10;
 				p.color = scheme[skills[i].type];
 				p.tag = skills[i].name;
 				p.type = skills[i].type;

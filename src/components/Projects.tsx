@@ -35,7 +35,7 @@ function ProjectItem(props: projects_item_props): JSX.Element {
 			},
 			false
 		);
-	}, []);
+	}, [id]);
 
 	const getIcon = (type: string) => {
 		switch (type) {
@@ -122,10 +122,9 @@ function ProjectItem(props: projects_item_props): JSX.Element {
 				<div>
 					{elem.RepoLinks.map(
 						(e: projects_item_icon_object, i: number) => (
-							<Tooltip title={e.Label}>
+							<Tooltip title={e.Label} key={i}>
 								<IconButton
 									sx={ProjectsStyles.ItemIconButton}
-									key={i}
 									onClick={() =>
 										window.open(e.Link, "_blank")
 									}
