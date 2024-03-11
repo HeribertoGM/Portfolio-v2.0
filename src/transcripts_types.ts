@@ -60,7 +60,6 @@ interface skills_type_section_titles_object {
 interface skills_transcript_object {
 	Title: string;
 	Skills: skills_item_object[];
-	TagYears: string;
 	TypeSectionsTitles: skills_type_section_titles_object;
 }
 
