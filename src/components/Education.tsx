@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Container, Typography } from "@mui/material";
 
 import { props } from "../types";
@@ -6,8 +7,26 @@ import { getTranscript } from "../transcripts";
 import tec_logo from "../images/tec_logo.png";
 import EducationStyles from "../styles/Education";
 
+let getWindowSize = () => {
+	const { innerWidth, innerHeight } = window;
+	return { innerWidth, innerHeight };
+};
+
 function Education({ language }: props): JSX.Element {
 	const data: education_transcript_object = getTranscript[language].Education;
+	const [windowSize, setWindowSize] = useState(getWindowSize());
+
+	useEffect(() => {
+		let handleWindowResize = () => {
+			setWindowSize(getWindowSize());
+		};
+
+		window.addEventListener("resize", handleWindowResize);
+
+		return () => {
+			window.removeEventListener("resize", handleWindowResize);
+		};
+	}, []);
 
 	return (
 		<Container
@@ -21,7 +40,11 @@ function Education({ language }: props): JSX.Element {
 			</Typography>
 			<hr style={EducationStyles.Divider} />
 			<Container
-				sx={EducationStyles.InnerContainer}
+				sx={{
+					...EducationStyles.InnerContainer,
+					flexDirection:
+						windowSize.innerWidth > 950 ? "row" : "column",
+				}}
 				maxWidth={false}
 				disableGutters={true}
 			>
@@ -31,7 +54,12 @@ function Education({ language }: props): JSX.Element {
 					style={EducationStyles.TecLogo}
 				/>
 				<Container
-					sx={EducationStyles.TextContainer}
+					sx={{
+						...EducationStyles.TextContainer,
+						marginLeft:
+							windowSize.innerWidth > 950 ? "80px" : "0px",
+						marginTop: windowSize.innerWidth > 950 ? "0px" : "50px",
+					}}
 					maxWidth={false}
 					disableGutters={true}
 				>

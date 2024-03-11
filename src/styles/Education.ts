@@ -3,9 +3,6 @@ import colors from "./Colors";
 
 const EducationStyles: style = {
 	SectionContainer: {
-		height: "550px",
-		minHeight: "550px",
-		maxHeight: "600px",
 		backgroundColor: colors.light_gray,
 	},
 	Title: {
@@ -19,12 +16,11 @@ const EducationStyles: style = {
 	},
 	InnerContainer: {
 		display: "flex",
-		flexDirection: "row",
 		alignItems: "center",
 		width: "90%",
 		maxWidth: "1000px",
-		marginTop: "50px",
-		marginBottom: "50px",
+		paddingTop: "50px",
+		paddingBottom: "50px",
 	},
 	TecLogo: {
 		border: "solid 3px " + colors.white,
@@ -33,7 +29,6 @@ const EducationStyles: style = {
 		height: "300px",
 	},
 	TextContainer: {
-		marginLeft: "80px",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
