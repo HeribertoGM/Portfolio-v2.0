@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Container, Typography } from "@mui/material";
 
 import { props } from "../types";
@@ -7,26 +6,8 @@ import { getTranscript } from "../transcripts";
 import tec_logo from "../images/tec_logo.png";
 import EducationStyles from "../styles/Education";
 
-let getWindowSize = () => {
-	const { innerWidth, innerHeight } = window;
-	return { innerWidth, innerHeight };
-};
-
-function Education({ language }: props): JSX.Element {
+function Education({ language, windowSize }: props): JSX.Element {
 	const data: education_transcript_object = getTranscript[language].Education;
-	const [windowSize, setWindowSize] = useState(getWindowSize());
-
-	useEffect(() => {
-		let handleWindowResize = () => {
-			setWindowSize(getWindowSize());
-		};
-
-		window.addEventListener("resize", handleWindowResize);
-
-		return () => {
-			window.removeEventListener("resize", handleWindowResize);
-		};
-	}, []);
 
 	return (
 		<Container

@@ -24,9 +24,6 @@ function sketch(p5: P5CanvasInstance<MySketchProps>) {
 	p5width = p5width > 1200 ? 1200 : p5width;
 	p5height = p5height > 900 ? 900 : p5height;
 
-	console.log(p5width);
-	console.log(p5height);
-
 	let filtering: string = "";
 
 	let skills: skills_item_object[] = [];
