@@ -49,7 +49,7 @@ function Education({ language, windowSize }: props): JSX.Element {
 					</Typography>
 					<br />
 					<Typography variant="h5" sx={EducationStyles.Text}>
-						{data.Date}
+						{data.DateStart} - {data.DateEnd}
 					</Typography>
 					<Typography variant="h5" sx={EducationStyles.Text}>
 						{data.GPA}

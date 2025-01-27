@@ -1,7 +1,7 @@
 const en = {
 	Header: {
 		Title: "Hi, I'm Heriberto",
-		Subtitle: "and i love coding in ",
+		Subtitle: "and I love coding in ",
 		Carousel: [
 			"TypeScript.",
 			"JavaScript.",
@@ -19,7 +19,8 @@ const en = {
 		Title: "Education",
 		Subtitle:
 			"Tec de Monterrey - Bachelor of Science in Computer Science and Technology Engineering",
-		Date: "August 2018 - July 2023",
+		DateStart: "August 2017",
+		DateEnd: "July 2023",
 		GPA: "GPA: 89/100",
 		Courses:
 			"Relevant courses includes: Data structures, Analysis and Design of Algorithms, Operative Systems, Compiler Design, Advanced Databases, Computer Networks, Project Administration.",
@@ -28,28 +29,50 @@ const en = {
 		Title: "Experience",
 		Items: [
 			{
-				Title: "Full-Stack Developer @Blue People",
-				Time: "Feb 2022 - Current",
-				Description: [
-					"Develop variety of web and mobile apps (React/React Native) used by companies to manage internal administration services.",
-					"Work within a multidisciplinary team during project development providing technical advice during planning phases.",
-					"Tech Leadership during final stages of project and mentoring new employees for the project.",
+				Title: "Fire Alarm Systems Support Engineer @SIELSE",
+				TimeStart: "Ago 2024",
+				TimeEnd: "Current",
+				Description:
+					"Certified specialist in Simplex fire alarm systems (4007, 4010, and 4100 panels) with expertise in providing technical support, programming, and maintenance for commercial and industrial sites.",
+				Bullets: [
+					"Conducted training sessions for client staff on system operation and maintenance, enhancing user confidence and system autonomy.",
+					"Performed routine diagnostics and preventative maintenance, reducing system downtime by 30%.",
+					"Provided on-site and remote support, resolving 90% of issues within the first response.",
 				],
 			},
 			{
-				Title: "Full-Stack Developer @Freelance",
-				Time: "Feb 2021 - Jun 2021",
-				Description: [
-					"Design and Develop web apps (React) on demand for small business needs.",
-					"Working on tight schedule and managing scope and requirements of client.",
+				Title: "Full Stack Developer @Blue People",
+				TimeStart: "Feb 2022",
+				TimeEnd: "May 2024",
+				Description:
+					"Software engineer specialized in full stack web and mobile development using React and React Native for the front end, and AWS services for the back end. Primarily worked with JavaScript, TypeScript, and Python.",
+				Bullets: [
+					"Programmed, tested, and deployed 6 web/mobile projects used by up to 10,000 individual users and industry solutions for clients in Mexico and US.",
+					"Provided technical advice and time estimations for project management and planning on a 2-week ahead planning with a reliability of more than 80% for time estimations.",
+					"Trained and mentored new employees while maintaining the Tech leadership of 3 projects on 3-4 member teams.",
 				],
 			},
 			{
-				Title: "Jr. Software Engineer @SES",
-				Time: "Jan 2019 - Feb 2022",
-				Description: [
-					"Design, Develop and Maintain web apps (React) for internal management software systems.",
-					"Develop automation (Python/C++) and analysis tools (React) for accounting management.",
+				Title: "Full Stack Developer @Freelance",
+				TimeStart: "Feb 2021",
+				TimeEnd: "Jun 2021",
+				Description:
+					"Full Stack Developer specialized in creating web pages and software solutions for small businesses based on Ramos Arizpe, Coah. Primarily worked with JavaScript, and Python.",
+				Bullets: [
+					"Identified growth opportunities for small businesses by increasing audience reachability.",
+					"Prototyped, developed, and deployed web applications used to increase communication channels with their target market by an estimated 30%.",
+					"Managed a software development project using an agile-like methodology for a 4-weekper project planning.",
+				],
+			},
+			{
+				Title: "Jr. Software Engineer @SIELSE",
+				TimeStart: "Jan 2018",
+				TimeEnd: "Feb 2022",
+				Description:
+					"Software engineer focused on identifying opportunities for process optimization within the company and developing software tools to address them. Utilized automation pipelines on Linux servers, as well as database design and administration. Primarily worked with JavaScript, Python, C++, and Bash Script.",
+				Bullets: [
+					"Designed and developed 3 major applications for the management and sorting of materials warehouses, reducing warehouse management times by 80% and manpower needed by 50%.",
+					"Led the development of software tools for analysis and automation of accounting processes within the company to improve by 30% the efficiency in planning times for annual tax returns.",
 				],
 			},
 		],
@@ -59,7 +82,7 @@ const en = {
 		Items: [
 			{
 				Title: "Portfolio Web Page",
-				Time: "2022",
+				Time: "2024",
 				Img: "Portfolio.jpg",
 				Description:
 					"Personal portfolio website to concentrate information from previous work and educational experiences, as well as projects of interest. Developed with Typescript and React, deployed on AWS.",
@@ -102,13 +125,7 @@ const en = {
 					"iOS",
 					"Web",
 				],
-				RepoLinks: [
-					{
-						Label: "AppStore (iOS)",
-						Type: "Link",
-						Link: "https://apps.apple.com/ai/app/z-onamaco/id1601743483",
-					},
-				],
+				RepoLinks: [],
 			},
 			{
 				Title: "Equilibrio Rotacional",
@@ -150,29 +167,29 @@ const en = {
 	Skills: {
 		Title: "Skills",
 		Skills: [
-			{ name: "Python", years: 5, skill: 5, type: "language" },
-			{ name: "TypeScript", years: 2, skill: 5, type: "language" },
-			{ name: "JavaScript", years: 5, skill: 5, type: "language" },
-			{ name: "C++", years: 6, skill: 4, type: "language" },
-			{ name: "Java", years: 3, skill: 4, type: "language" },
-			{ name: "SQL", years: 4, skill: 5, type: "language" },
-			{ name: "C", years: 3, skill: 3, type: "language" },
-			{ name: "BashScript", years: 3, skill: 4, type: "language" },
-			{ name: "Ruby", years: 1, skill: 2, type: "language" },
-			{ name: "Racket", years: 1, skill: 2, type: "language" },
-			{ name: "AWS", years: 1, skill: 5, type: "cloud" },
-			{ name: "Firebase", years: 2, skill: 4, type: "cloud" },
-			{ name: "p5.js", years: 3, skill: 5, type: "framework" },
-			{ name: "React", years: 3, skill: 5, type: "framework" },
-			{ name: "React Native", years: 1, skill: 5, type: "framework" },
-			{ name: "Next.js", years: 1, skill: 4, type: "framework" },
-			{ name: "Bootstrap", years: 3, skill: 4, type: "framework" },
-			{ name: "Vue", years: 1, skill: 1, type: "framework" },
-			{ name: "Angular", years: 1, skill: 1, type: "framework" },
-			{ name: "ExpressJS", years: 4, skill: 5, type: "framework" },
-			{ name: "Linux", years: 5, skill: 5, type: "other" },
-			{ name: "Git", years: 5, skill: 5, type: "other" },
-			{ name: "Docker", years: 3, skill: 3, type: "other" },
+			{ name: "Python", skill: 5, type: "language" },
+			{ name: "TypeScript", skill: 5, type: "language" },
+			{ name: "JavaScript", skill: 5, type: "language" },
+			{ name: "C++", skill: 4, type: "language" },
+			{ name: "Java", skill: 4, type: "language" },
+			{ name: "SQL", skill: 5, type: "language" },
+			{ name: "C", skill: 3, type: "language" },
+			{ name: "BashScript", skill: 4, type: "language" },
+			{ name: "Ruby", skill: 2, type: "language" },
+			{ name: "Racket", skill: 2, type: "language" },
+			{ name: "AWS", skill: 5, type: "cloud" },
+			{ name: "Firebase", skill: 4, type: "cloud" },
+			{ name: "p5.js", skill: 5, type: "framework" },
+			{ name: "React", skill: 5, type: "framework" },
+			{ name: "React Native", skill: 5, type: "framework" },
+			{ name: "Next.js", skill: 4, type: "framework" },
+			{ name: "Bootstrap", skill: 4, type: "framework" },
+			{ name: "Vue", skill: 1, type: "framework" },
+			{ name: "Angular", skill: 1, type: "framework" },
+			{ name: "ExpressJS", skill: 5, type: "framework" },
+			{ name: "Linux", skill: 5, type: "other" },
+			{ name: "Git", skill: 5, type: "other" },
+			{ name: "Docker", skill: 3, type: "other" },
 		],
 		TypeSectionsTitles: {
 			language: "Languages",

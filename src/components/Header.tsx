@@ -31,7 +31,7 @@ function Header({ language, windowSize }: props): JSX.Element {
 					{data.Subtitle}
 					<ReactRotatingText
 						items={data.Carousel}
-						typingInterval={500}
+						typingInterval={250}
 						deletingInterval={250}
 						cursor={false}
 					/>

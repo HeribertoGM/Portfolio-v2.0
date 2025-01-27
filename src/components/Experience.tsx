@@ -25,7 +25,7 @@ function ExperienceItem(props: experience_item_props): JSX.Element {
 					sx={ExperienceStyles.TimelineOppositeContent}
 				>
 					<Typography sx={ExperienceStyles.ItemTime}>
-						{elem.Time}
+						{elem.TimeStart} - {elem.TimeEnd}
 					</Typography>
 				</TimelineOppositeContent>
 				<TimelineSeparator sx={ExperienceStyles.TimelineSeparator}>
@@ -36,8 +36,16 @@ function ExperienceItem(props: experience_item_props): JSX.Element {
 					<Typography sx={ExperienceStyles.ItemTitle}>
 						{elem.Title}
 					</Typography>
+					<Typography
+						sx={{
+							...ExperienceStyles.ItemDescription,
+							paddingLeft: 1,
+						}}
+					>
+						{elem.Description}
+					</Typography>
 					<ul>
-						{elem.Description.map((text, idx) => {
+						{elem.Bullets.map((text, idx) => {
 							return (
 								<Typography
 									key={idx}

@@ -7,15 +7,18 @@ interface header_transcript_object {
 interface education_transcript_object {
 	Title: string;
 	Subtitle: string;
-	Date: string;
+	DateStart: string;
+	DateEnd: string;
 	GPA: string;
 	Courses: string;
 }
 
 interface experience_item_object {
 	Title: string;
-	Time: string;
-	Description: string[];
+	TimeStart: string;
+	TimeEnd: string;
+	Description: string;
+	Bullets: string[];
 }
 
 interface experience_transcript_object {
@@ -45,7 +48,6 @@ interface projects_transcript_object {
 
 interface skills_item_object {
 	name: string;
-	years: number;
 	skill: number;
 	type: string;
 }
