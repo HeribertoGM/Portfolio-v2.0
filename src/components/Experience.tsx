@@ -94,7 +94,7 @@ function Experience({ language }: props): JSX.Element {
 		window.addEventListener("scroll", handler);
 
 		return () => window.removeEventListener("scroll", handler);
-	}, []);
+	});
 
 	return (
 		<Container

@@ -21,6 +21,7 @@ function Error(): JSX.Element {
 							<img
 								src={require(`../images/Batman.webp`)}
 								style={ErrorStyles.Img}
+								alt="err-img"
 							/>
 						</Container>
 					</Grid>
